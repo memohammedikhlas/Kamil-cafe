@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve a Table | Kamil Cafe</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="38" height="38"></span><span class="brand-word"><span class="name" data-settings="cafeName">Kamil</span><span class="sub">CAFE</span></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="booking.html" class="btn btn-primary"><span class="long">Reserve a</span> Table</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Reserve a Table</h1>
+    <p>Fill in your details below. We'll email your confirmation once the team reviews your booking.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container" style="max-width:720px;">
+    <div class="form-card">
+      <div class="form-msg" id="formMsg"></div>
+      <form id="bookingForm">
+        <div class="form-row">
+          <div class="field"><label for="name">Full Name *</label><input type="text" id="name" name="name" required placeholder="Your name"></div>
+          <div class="field"><label for="phone">Phone Number *</label><input type="tel" id="phone" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}"></div>
+        </div>
+
+        <div class="field"><label for="email">Email (for booking confirmation)</label><input type="email" id="email" name="email" placeholder="you@example.com"></div>
+
+        <div class="form-row">
+          <div class="field"><label for="date">Date *</label><input type="date" id="date" name="date" required></div>
+          <div class="field"><label for="time">Time *</label><input type="time" id="time" name="time" required></div>
+        </div>
+
+        <div class="form-row">
+          <div class="field"><label for="guests">Number of Guests *</label><input type="number" id="guests" name="guests" min="1" max="100" required placeholder="e.g. 2"></div>
+          <div class="field">
+            <label for="occasion">Occasion</label>
+            <select id="occasion" name="occasion">
+              <option value="family">Casual / Everyday</option>
+              <option value="party">Celebration</option>
+              <option value="event">Event / Group</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field"><label for="notes">Additional Notes (optional)</label><textarea id="notes" name="notes" placeholder="Any special requests..."></textarea></div>
+
+        <div class="consent-field">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">I agree to Kamil Cafe processing my personal data to handle this booking, as described in the <a href="privacy.html" target="_blank">Privacy Policy</a>. *</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;" id="submitBtn">Request Booking</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Kamil Cafe. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="copyright.html">Copyright Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Kamil Cafe</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-mark"><img src="assets/logo.svg" alt="" width="38" height="38"></span><span class="brand-word"><span class="name" data-settings="cafeName">Kamil</span><span class="sub">CAFE</span></span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="booking.html" class="btn btn-primary"><span class="long">Reserve a</span> Table</a>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Questions about the menu, private events, or anything else — send us a message.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container split">
+    <div class="form-card">
+      <div class="form-msg" id="contactMsg"></div>
+      <form id="contactForm">
+        <div class="field"><label for="cname">Full Name *</label><input type="text" id="cname" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="cinfo">Phone or Email *</label><input type="text" id="cinfo" name="contactInfo" required placeholder="How can we reach you?"></div>
+        <div class="field"><label for="cmessage">Message *</label><textarea id="cmessage" name="message" required placeholder="Write your message here..."></textarea></div>
+        <div class="consent-field">
+          <input type="checkbox" id="cconsent" name="consent" required>
+          <label for="cconsent">I agree to Kamil Cafe processing my personal data to respond to this message, as described in the <a href="privacy.html" target="_blank">Privacy Policy</a>. *</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;" id="contactSubmitBtn">Send Message</button>
+      </form>
+    </div>
+
+    <div>
+      <h3>Visit Us</h3>
+      <div class="timing-row"><span class="k">Address</span><span class="v" data-settings="address">Add your address here</span></div>
+      <div class="timing-row"><span class="k">Hours</span><span class="v"><span data-settings-hours>8 AM – 11 PM</span>, daily</span></div>
+      <div class="timing-row"><span class="k">Phone</span><span class="v" data-settings="contactPhone">Add your phone number here</span></div>
+
+      <iframe class="map-embed" style="margin-top:20px;" src="https://www.google.com/maps?q=cafe&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; <span class="current-year"></span> Kamil Cafe. All rights reserved.</span>
+      <span><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="copyright.html">Copyright Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

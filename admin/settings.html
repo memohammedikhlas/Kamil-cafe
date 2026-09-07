@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings | Kamil Cafe Admin</title>
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+  <aside class="admin-sidebar">
+    <div class="admin-brand"><img src="assets/logo.svg" alt="" width="30" height="30"><span class="brand-word"><span class="name">Kamil</span><span class="sub">CAFE ADMIN</span></span></div>
+    <ul class="admin-nav">
+      <li><a href="dashboard.html"><span class="icon">&#128202;</span> Overview</a></li>
+      <li><a href="bookings.html"><span class="icon">&#128197;</span> Bookings</a></li>
+      <li><a href="menu.html"><span class="icon">&#127869;&#65039;</span> Menu</a></li>
+      <li><a href="offers.html"><span class="icon">&#127991;&#65039;</span> Offers</a></li>
+      <li><a href="hero-slides.html"><span class="icon">&#128247;</span> Hero Images</a></li>
+      <li><a href="gallery.html"><span class="icon">&#128444;&#65039;</span> Gallery</a></li>
+      <li><a href="contacts.html"><span class="icon">&#9993;&#65039;</span> Contacts</a></li>
+      <li><a href="settings.html" class="active"><span class="icon">&#9881;&#65039;</span> Settings</a></li>
+    </ul>
+    <button class="admin-logout" id="logoutBtn">Log Out</button>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div><h1>Restaurant Settings</h1><p>Basic details shown across the public site — name, contact, hours, and WhatsApp number.</p></div>
+    </div>
+
+    <div class="form-card" style="max-width:640px;">
+      <div class="form-msg" id="settingsMsg"></div>
+      <form id="settingsForm">
+        <h3 style="margin-bottom:20px;">General</h3>
+
+        <div class="field"><label for="cafeName">Restaurant Name</label><input type="text" id="cafeName" placeholder="Kamil Cafe"></div>
+        <div class="field"><label for="contactPhone">Contact Phone</label><input type="text" id="contactPhone" placeholder="e.g. +91 98765 43210"></div>
+        <div class="field"><label for="address">Address</label><input type="text" id="address" placeholder="e.g. Solapur Road, Vijayapura, Karnataka"></div>
+
+        <div class="form-row">
+          <div class="field"><label for="openingTime">Opening Time</label><input type="text" id="openingTime" placeholder="e.g. 8:00 AM"></div>
+          <div class="field"><label for="closingTime">Closing Time</label><input type="text" id="closingTime" placeholder="e.g. 11:00 PM"></div>
+        </div>
+
+        <div class="field"><label for="email">Email</label><input type="email" id="email" placeholder="e.g. hello@kamilcafe.in"></div>
+        <div class="field">
+          <label for="whatsappNumber">WhatsApp Number</label>
+          <input type="text" id="whatsappNumber" placeholder="e.g. 919876543210 (digits only, country code first)">
+        </div>
+        <div class="field"><label for="aboutTagline">About / Tagline</label><textarea id="aboutTagline" placeholder="A short line about the cafe, shown on the About page"></textarea></div>
+
+        <div class="modal-close-row" style="justify-content:flex-start; margin-top:8px;">
+          <button type="submit" class="btn btn-primary" id="saveBtn">Save Changes</button>
+          <button type="button" class="btn btn-outline" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/settings-admin.js"></script>
+</body>
+</html>

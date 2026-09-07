@@ -1,0 +1,18 @@
+# Netlify custom headers - applies these security headers to every response
+# from this deployment. See: https://docs.netlify.com/routing/headers/
+#
+# IMPORTANT: after deploying the backend (Render), replace <BACKEND_URL>
+# below with its real HTTPS URL - connect-src/img-src must list it
+# explicitly or API calls and uploaded-image previews will be silently
+# blocked by the browser. No 'frame-src' needed here (admin embeds no
+# external content), and this is deliberately stricter than the public
+# site's headers since only the cafe owner ever loads these pages.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: <BACKEND_URL>; connect-src 'self' <BACKEND_URL>; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=15552000; includeSubDomains
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  X-Robots-Tag: noindex, nofollow
